@@ -1,6 +1,6 @@
 # vue-materials
 
-飞冰（ICE）生态的 Vue 物料，基于 Vue@2.x, ElementUI, `@vue/cli`。
+飞冰（ICE）官方 Vue 物料，基于 Vue@2.x, ElementUI, `@vue/cli`。
 
 ## 使用
 
@@ -8,9 +8,9 @@
 
 ## 相关文档
 
-- [飞冰（ICE）官网](https://alibaba.github.io/ice/)
-- [开发自定义物料指引](https://alibaba.github.io/ice/docs/materials/devtools)
 - [issue 反馈](https://github.com/alibaba/ice/issues/new)
+- [开发自定义物料指引](https://alibaba.github.io/ice/docs/materials/devtools)
+- [飞冰（ICE）官网](https://alibaba.github.io/ice/)
 
 ## 如何贡献
 
@@ -28,6 +28,8 @@ $ idev add
 ### 开发调试
 
 ```bash
+$ cd blocks/Example
+$ npm install
 $ npm run start
 $ npm run build
 ```
