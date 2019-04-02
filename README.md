@@ -4,7 +4,7 @@
 
 ## 使用
 
-对应的物料数据：https://ice.alicdn.com/assets/vue-materials.json ，可以通过 Iceworks 的自定义物料功能使用。
+对应的物料数据：`https://ice.alicdn.com/assets/vue-materials.json`，可以通过 Iceworks 的自定义物料功能使用。
 
 ## 相关文档
 
