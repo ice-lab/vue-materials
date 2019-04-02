@@ -1,0 +1,8 @@
+{
+  "name": "vue-materials",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "ice-devtools": "^2.2.2"
+  }
+}
