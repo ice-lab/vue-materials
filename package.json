@@ -2,7 +2,21 @@
   "name": "vue-materials",
   "version": "1.0.0",
   "description": "",
+  "scripts": {
+    "upload-oss": "node scripts/upload-oss.js",
+    "generate": "idev generate",
+    "lint": "eslint --cache --ext .js .vue .jsx ./"
+  },
   "dependencies": {
-    "ice-devtools": "^2.2.2"
-  }
+    "@vue/cli-service": "^3.5.3",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "ali-oss": "^6.1.0",
+    "babel-eslint": "^8.1.2",
+    "eslint": "^4.14.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "ice-devtools": "^2.2.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "materialConfig": {}
 }
