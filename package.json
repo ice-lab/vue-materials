@@ -20,5 +20,7 @@
     "ice-devtools": "^2.2.2",
     "vue-template-compiler": "^2.6.10"
   },
-  "materialConfig": {}
+  "materialConfig": {
+    "type": "vue"
+  }
 }
