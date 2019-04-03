@@ -10,6 +10,10 @@
     "title": "D2Admin ICE",
     "screenshot": "https://qiniucdn.fairyever.com/20181031190420.png"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ice-lab/vue-materials/tree/master/scaffolds/d2-admin-ice"
+  },
   "keywords": [
     "ice-scaffold",
     "dashboard",
