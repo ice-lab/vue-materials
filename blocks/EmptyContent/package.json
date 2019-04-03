@@ -6,7 +6,7 @@
   "files": ["src/", "lib/"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/alibaba/ice/tree/master/vue-materials/blocks/EmptyContent"
+    "url": "https://github.com/ice-lab/vue-materials/tree/master/blocks/EmptyContent"
   },
   "license": "MIT",
   "keywords": ["ice", "vue", "block"],
