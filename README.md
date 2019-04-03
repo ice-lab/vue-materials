@@ -1,6 +1,6 @@
 # vue-materials
 
-飞冰（ICE）官方 Vue 物料（模板/区块/组件），基于 `Vue@2.x`, Element, `@vue/cli`。
+飞冰官方推荐 Vue 物料（模板/区块/组件），基于 Vue 2.x, Element, Vue CLI。
 
 ## 使用
 
@@ -33,7 +33,6 @@ $ npm run build
 
 - [issue 反馈](https://github.com/alibaba/ice/issues/new)
 - [开发自定义物料指引](https://alibaba.github.io/ice/docs/materials/devtools)
-- [Vue](https://vuejs.org/)
 - [Element](https://element.eleme.io/#/zh-CN)
 - [Vue CLI](https://cli.vuejs.org)
 - [d2-admin](https://github.com/d2-projects/d2-admin)
