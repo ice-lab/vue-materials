@@ -1,9 +1,18 @@
 {
   "name": "@vue-materials/admin-lite",
-  "version": "1.0.7",
+  "version": "1.0.10",
   "description": "该模板适用于从 0 到 1 开始搭建项目，内置基础的页面，路由和菜单展示。",
-  "homepage": "https://alibaba.github.io/ice/scaffold-preview/admin-lite.html",
+  "homepage": "https://unpkg.com/@vue-materials/admin-lite@latest/dist/index.html",
   "author": "ice-admin@alibaba-inc.com",
+  "files": [
+    "src/",
+    "dist/",
+    "public/",
+    "_gitignore",
+    ".babelrc",
+    ".postcssrc",
+    ".vue.config.js"
+  ],
   "scripts": {
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
