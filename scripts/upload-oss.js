@@ -21,7 +21,7 @@ const ossClient = oss({
   time: '120s',
 });
 
-const fromPath = path.resolve(__dirname, '../build/vue-materials.json');
+const fromPath = path.resolve(__dirname, '../build/materials.json');
 const toPath = path.join(assetsPath, 'vue-materials.json');
 
 console.log('start upload oss', fromPath, toPath);
