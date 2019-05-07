@@ -7,7 +7,9 @@
     "generate": "idev generate",
     "generate:ci": "LOG_LEVEL=verbose REGISTRY=https://registry.npmjs.org idev generate",
     "lint": "eslint --cache --ext .js .vue ./",
-    "deploy": "idev -V && npm run generate:ci && npm run upload-oss"
+    "deploy": "idev -V && npm run generate:ci && npm run upload-oss",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@vue/cli-service": "^3.5.3",
@@ -18,9 +20,11 @@
     "eslint": "^4.14.0",
     "eslint-plugin-vue": "^5.2.2",
     "ice-devtools": "^2.2.2",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "snyk": "^1.161.1"
   },
   "materialConfig": {
     "type": "vue"
-  }
+  },
+  "snyk": true
 }
