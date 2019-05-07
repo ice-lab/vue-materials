@@ -15,7 +15,7 @@ module.exports = function (content /*, map, meta */) {
   const options = loaderUtils.getOptions(loaderContext) || {}
   const rawShortFilePath = path
     .relative(context, resourcePath)
-    .replace(/^(\.\.[\/\\])+/, '')
+    .replace(/^(\.\.[/\\])+/, '')
 
   const propName = options.propName || defaultPropName
 

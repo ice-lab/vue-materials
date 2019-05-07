@@ -1,7 +1,7 @@
 const { blockName } = require('./lib/config.js')
 
 // for chainWebpack
-module.exports = function(config, options) {
+module.exports = function (config, options) {
   config.module
     .rule('vue')
     .use('vue-filename-injector')
