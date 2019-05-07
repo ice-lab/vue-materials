@@ -1,5 +1,3 @@
-import { version } from '../package'
-
 export default {
   // 快捷键
   // 支持快捷键 例如 ctrl+shift+s
@@ -18,16 +16,13 @@ export default {
     opened: [
       {
         name: 'index',
+        fullPath: '/',
         meta: {
           title: '首页',
-          requiresAuth: false
+          auth: false
         }
       }
     ]
-  },
-  // 版本
-  releases: {
-    version
   },
   // 菜单搜索
   search: {
@@ -68,11 +63,5 @@ export default {
   // 是否默认开启页面切换动画
   transition: {
     active: true
-  },
-  // 在读取持久化数据失败时默认用户信息
-  user: {
-    info: {
-      name: 'Ghost'
-    }
   }
 }

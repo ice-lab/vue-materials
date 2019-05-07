@@ -55,12 +55,12 @@ export default {
       }, 500)
     },
     // 监听路由 控制侧边栏激活状态
-    '$route.matched': {
-      handler (val) {
-        this.active = val[val.length - 1].path
+    '$route': {
+      handler ({ fullPath }) {
+        this.active = fullPath
         this.$nextTick(() => {
           if (this.aside.length > 0 && this.$refs.menu) {
-            this.$refs.menu.activeIndex = this.active
+            this.$refs.menu.activeIndex = fullPath
           }
         })
       },
@@ -76,7 +76,8 @@ export default {
   methods: {
     scrollInit () {
       this.BS = new BScroll(this.$el, {
-        mouseWheel: true
+        mouseWheel: true,
+        click: true
         // 如果你愿意可以打开显示滚动条
         // scrollbar: {
         //   fade: true,
