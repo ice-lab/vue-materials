@@ -7,7 +7,7 @@
           :x="contentmenuX"
           :y="contentmenuY">
           <d2-contextmenu-list
-            :menulist="tagName === 'index' ? contextmenuListIndex : contextmenuList"
+            :menulist="tagName === '/' ? contextmenuListIndex : contextmenuList"
             @rowClick="contextmenuClick"/>
         </d2-contextmenu>
         <el-tabs
@@ -19,10 +19,10 @@
           @edit="handleTabsEdit"
           @contextmenu.native="handleContextmenu">
           <el-tab-pane
-            v-for="(page, index) in opened"
-            :key="index"
+            v-for="page in opened"
+            :key="page.fullPath"
             :label="page.meta.title || '未命名'"
-            :name="page.name"/>
+            :name="page.fullPath"/>
         </el-tabs>
       </div>
     </div>
@@ -32,7 +32,7 @@
       <el-dropdown
         size="default"
         split-button
-        @click="handleControlBtnClick"
+        @click="closeAll"
         @command="command => handleControlItemClick(command)">
         <d2-icon name="times-circle"/>
         <el-dropdown-menu slot="dropdown">
@@ -79,7 +79,7 @@ export default {
         { icon: 'times', title: '关闭其它', value: 'other' },
         { icon: 'times-circle', title: '关闭全部', value: 'all' }
       ],
-      tagName: 'index'
+      tagName: '/'
     }
   },
   computed: {
@@ -131,8 +131,7 @@ export default {
         this.contextmenuFlag = false
       }
       const params = {
-        pageSelect: tagName,
-        vm: this
+        pageSelect: tagName
       }
       switch (command) {
         case 'left':
@@ -145,7 +144,7 @@ export default {
           this.closeOther(params)
           break
         case 'all':
-          this.closeAll(this)
+          this.closeAll()
           break
         default:
           this.$message.error('无效的操作')
@@ -153,17 +152,11 @@ export default {
       }
     },
     /**
-     * @description 接收点击关闭控制上按钮的事件
-     */
-    handleControlBtnClick () {
-      this.closeAll(this)
-    },
-    /**
      * @description 接收点击 tab 标签的事件
      */
     handleClick (tab, event) {
       // 找到点击的页面在 tag 列表里是哪个
-      const page = this.opened.find(page => page.name === tab.name)
+      const page = this.opened.find(page => page.fullPath === tab.name)
       const { name, params, query } = page
       if (page) {
         this.$router.push({ name, params, query })
@@ -175,8 +168,7 @@ export default {
     handleTabsEdit (tagName, action) {
       if (action === 'remove') {
         this.close({
-          tagName,
-          vm: this
+          tagName
         })
       }
     }

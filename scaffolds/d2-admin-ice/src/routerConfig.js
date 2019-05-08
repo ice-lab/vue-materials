@@ -32,7 +32,11 @@ const routerConfig = [
     path: '/',
     name: 'index',
     layout: HeaderAside,
-    component: Index
+    component: Index,
+    meta: {
+      auth: true,
+      title: '首页'
+    }
   },
   // 刷新页面 必须保留
   {
@@ -66,7 +70,7 @@ const routerConfig = [
     layout: HeaderAside,
     component: Demo1,
     meta: {
-      requiresAuth: true,
+      auth: true,
       title: '演示 1'
     }
   },
@@ -89,7 +93,7 @@ const routerConfigMenuOut = [
     name: 'login',
     component: Login,
     meta: {
-      requiresAuth: false
+      auth: false
     }
   },
   // 404

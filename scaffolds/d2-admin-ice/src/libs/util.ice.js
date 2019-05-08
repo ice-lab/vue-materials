@@ -32,11 +32,9 @@ util.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
             path: '',
             // 如果路由没有设置 name 就用 path 处理成name
             name: item.name || path2name(item.path),
-            // 忽略标签页选项
-            hidden: item.hidden || false,
             // meta 设置和默认值合并
             meta: Object.assign({
-              requiresAuth: true,
+              auth: true,
               title: path2name(item.path)
             }, item.meta),
             // 页面组件
@@ -51,7 +49,7 @@ util.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
         name: item.name || path2name(item.path),
         // meta 设置和默认值合并
         meta: Object.assign({
-          requiresAuth: true,
+          auth: true,
           title: path2name(item.path)
         }, item.meta),
         // 页面组件

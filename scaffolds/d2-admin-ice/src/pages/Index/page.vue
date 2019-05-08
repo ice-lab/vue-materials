@@ -1,8 +1,6 @@
 <template>
   <d2-container class="page">
-    <d2-page-cover
-      title="D2 Admin"
-      sub-title="优雅的中后台集成方案">
+    <d2-page-cover>
       <d2-icon-svg
         class="page__logo"
         name="d2-admin"/>
@@ -13,7 +11,7 @@
           <span @click="$open('https://github.com/d2-projects/d2-admin-start-kit')">简化版</span> |
           <span @click="$open('https://alibaba.github.io/ice/scaffold?type=vue')">飞冰</span> |
           <span @click="$open('https://juejin.im/user/57a48b632e958a006691b946/posts')">掘金</span> |
-          <span @click="$open('https://awesome.fairyever.com/daily/')">开发者日报</span> |
+          <span @click="$open('https://daily.fairyever.com')">日报</span> |
           <el-popover
             :width="172"
             trigger="hover">
@@ -37,16 +35,22 @@
 <script>
 import D2HelpBtn from './components/d2-help-btn'
 import D2Badge from './components/d2-badge'
+import D2PageCover from './components/d2-page-cover'
 export default {
   components: {
     D2HelpBtn,
-    D2Badge
+    D2Badge,
+    D2PageCover
+  },
+  data () {
+    return {
+      filename: __filename
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '~@/assets/style/public.scss';
 .page {
   .page__logo {
     width: 120px;
@@ -54,7 +58,7 @@ export default {
   .page__btn-group {
     color: $color-text-placehoder;
     font-size: 12px;
-    margin-top: -10px;
+    margin-top: 0px;
     margin-bottom: 20px;
     span {
       color: $color-text-sub;

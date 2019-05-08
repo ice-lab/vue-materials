@@ -4,28 +4,30 @@ import { Message } from 'element-ui'
 import util from '@/libs/util'
 
 // 创建一个错误
-function errorCreat (msg) {
-  const err = new Error(msg)
-  errorLog(err)
-  throw err
+function errorCreate (msg) {
+  const error = new Error(msg)
+  errorLog(error)
+  throw error
 }
 
 // 记录和显示错误
-function errorLog (err) {
+function errorLog (error) {
   // 添加到日志
-  store.dispatch('d2admin/log/add', {
-    type: 'error',
-    err,
-    info: '数据请求异常'
+  store.dispatch('d2admin/log/push', {
+    message: '数据请求异常',
+    type: 'danger',
+    meta: {
+      error
+    }
   })
   // 打印到控制台
   if (process.env.NODE_ENV === 'development') {
     util.log.danger('>>>>>> Error >>>>>>')
-    console.log(err)
+    console.log(error)
   }
   // 显示提示
   Message({
-    message: err.message,
+    message: error.message,
     type: 'error',
     duration: 5 * 1000
   })
@@ -41,13 +43,9 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     // 在请求发送之前做一些处理
-    if (!(/^https:\/\/|http:\/\//.test(config.url))) {
-      const token = util.cookies.get('token')
-      if (token && token !== 'undefined') {
-        // 让每个请求携带token-- ['X-Token']为自定义key 请根据实际情况自行修改
-        config.headers['X-Token'] = token
-      }
-    }
+    const token = util.cookies.get('token')
+    // 让每个请求携带token-- ['X-Token']为自定义key 请根据实际情况自行修改
+    config.headers['X-Token'] = token
     return config
   },
   error => {
@@ -76,11 +74,11 @@ service.interceptors.response.use(
           return dataAxios.data
         case 'xxx':
           // [ 示例 ] 其它和后台约定的 code
-          errorCreat(`[ code: xxx ] ${dataAxios.msg}: ${response.config.url}`)
+          errorCreate(`[ code: xxx ] ${dataAxios.msg}: ${response.config.url}`)
           break
         default:
           // 不是正确的 code
-          errorCreat(`${dataAxios.msg}: ${response.config.url}`)
+          errorCreate(`${dataAxios.msg}: ${response.config.url}`)
           break
       }
     }
