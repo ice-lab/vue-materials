@@ -6,7 +6,7 @@ const resolve = dir => require('path').join(__dirname, dir)
 
 // 增加环境变量
 // 注意 飞冰会在下载脚手架之后 package.json version 强制变为 1.0.0 所以在这里标记版本
-process.env.VUE_APP_VERSION = '1.4.0'
+process.env.VUE_APP_VERSION = '1.4.1'
 process.env.VUE_APP_BUILD_TIME = require('dayjs')().format('YYYY-M-D HH:mm:ss')
 
 // 基础路径 注意发布之前要先修改这里
@@ -47,10 +47,8 @@ module.exports = {
         config => config.devtool('cheap-source-map')
       )
       // TRAVIS 构建 vue-loader 添加 filename
-      .when(process.env.VUE_APP_BUILD_MODE === 'TRAVIS' || process.env.NODE_ENV === 'development',
-        VueFilenameInjector(config, {
-          propName: process.env.VUE_APP_SOURCE_VIEWER_PROP_NAME
-        })
+      .when(process.env.VUE_APP_BUILD_MODE === 'TRAVIS',
+        VueFilenameInjector(config)
       )
       // 非开发环境
       .when(process.env.NODE_ENV !== 'development', config => {
