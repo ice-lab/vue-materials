@@ -1,7 +1,5 @@
 {
-  "name": "vue-materials",
-  "version": "1.0.0",
-  "description": "",
+  "private": true,
   "scripts": {
     "upload-oss": "node scripts/upload-oss.js",
     "generate": "idev generate",
