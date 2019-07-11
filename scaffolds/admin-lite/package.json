@@ -69,6 +69,6 @@
   },
   "iceworks": {
     "type": "vue",
-    "adapter": "adapter-vue-v2"
+    "adapter": "adapter-vue-v2" 
   }
 }
