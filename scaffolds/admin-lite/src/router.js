@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import routerConfig from './routerConfig';
+import routerConfig from '@config/routes';
 
 /**
  * 将路由配置扁平化

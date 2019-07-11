@@ -2,9 +2,9 @@
 // 你可以调整 routerConfig 里的内容
 // 变量名 routerConfig 为 iceworks 检测关键字，请不要修改名称
 
-import HeaderAsideLayout from './layouts/HeaderAsideLayout';
-import Dashboard from './pages/Dashboard';
-import NotFound from './pages/NotFound';
+import HeaderAsideLayout from '@src/layouts/HeaderAsideLayout';
+import Dashboard from '@src/pages/Dashboard';
+import NotFound from '@src/pages/NotFound';
 
 const routerConfig = [
   {
