@@ -1,3 +1,4 @@
+/* eslint arrow-body-style:0 */
 const oss = require('ali-oss');
 const path = require('path');
 const fs = require('fs');
@@ -28,16 +29,6 @@ const ossClient = oss({
 const materialPath = path.resolve(__dirname, '../build/materials.json');
 const toPath = path.join(assetsPath, dirPath, 'vue-materials.json');
 
-console.log('start upload oss', materialPath, toPath);
-
-sortScaffoldMaterials()
-  .then(() => {
-    return ossClient.put(toPath, materialPath);
-  })
-  .then((result) => {
-    console.log('upload success', result);
-  });
-
 /**
  * 按照下载量进行排序推荐
  */
@@ -63,7 +54,17 @@ function sortScaffoldMaterials() {
       (err) => {
         if (err) reject(err);
         resolve();
-      }
+      },
     );
   });
 }
+
+console.log('start upload oss', materialPath, toPath);
+
+sortScaffoldMaterials()
+  .then(() => {
+    return ossClient.put(toPath, materialPath);
+  })
+  .then((result) => {
+    console.log('upload success', result);
+  });
