@@ -1,7 +1,6 @@
 const oss = require('ali-oss');
 const path = require('path');
 const fs = require('fs');
-const request = require('request');
 const scaffolds = require('./scaffolds');
 const pkgData = require('../package.json');
 
