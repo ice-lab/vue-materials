@@ -1,5 +1,6 @@
 {
   "private": true,
+  "kitVersion": "3.x",
   "scripts": {
     "upload-oss": "node scripts/upload-oss.js",
     "generate": "idev generate",
@@ -16,6 +17,7 @@
     "eslint": "^4.14.0",
     "eslint-plugin-vue": "^5.2.2",
     "ice-devtools": "^2.2.2",
+    "request": "^2.88.0",
     "vue-template-compiler": "^2.6.10"
   },
   "materialConfig": {
