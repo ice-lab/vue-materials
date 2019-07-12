@@ -3,19 +3,19 @@
     <div class="wscn-http404">
       <div class="pic-404">
         <img
-          :src="img_404"
+          src="../../assets/404.png"
           class="pic-404__parent"
           alt="404">
         <img
-          :src="img_404_cloud"
+          src="../../assets/404_cloud.png"
           class="pic-404__child left"
           alt="404">
         <img
-          :src="img_404_cloud"
+          src="../../assets/404_cloud.png"
           class="pic-404__child mid"
           alt="404">
         <img
-          :src="img_404_cloud"
+          src="../../assets/404_cloud.png"
           class="pic-404__child right"
           alt="404">
       </div>
@@ -28,21 +28,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import NotFoundImage from '@/assets/404.png';
-import NotFoundCloud from '@/assets/404_cloud.png';
-
-export default {
-  name: 'Page404',
-  data() {
-    return {
-      NotFoundImage,
-      NotFoundCloud,
-    };
-  },
-};
-</script>
 
 <style lang="scss" scoped>
 .wscn-http404 {
