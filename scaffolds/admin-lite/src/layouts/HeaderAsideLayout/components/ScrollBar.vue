@@ -1,7 +1,13 @@
 <template>
-  <div class="scroll-container" ref="scrollContainer" @wheel.prevent="handleScroll" >
-    <div class="scroll-wrapper" ref="scrollWrapper" :style="{top: top + 'px'}">
-      <slot></slot>
+  <div
+    ref="scrollContainer"
+    class="scroll-container"
+    @wheel.prevent="handleScroll" >
+    <div
+      ref="scrollWrapper"
+      :style="{top: top + 'px'}"
+      class="scroll-wrapper">
+      <slot/>
     </div>
   </div>
 </template>
@@ -20,13 +26,13 @@ export default {
     handleScroll(e) {
       const eventDelta = e.wheelDelta || -e.deltaY * 3;
       const $container = this.$refs.scrollContainer;
-      const $containerHeight = $container.offsetHeight;
+      const $containerHeight = parseInt($container.offsetHeight, 10);
       const $wrapper = this.$refs.scrollWrapper;
-      const $wrapperHeight = $wrapper.offsetHeight;
+      const $wrapperHeight = parseInt($wrapper.offsetHeight, 10);
       if (eventDelta > 0) {
         this.top = Math.min(0, this.top + eventDelta);
       } else if ($containerHeight - delta < $wrapperHeight) {
-        if (this.top < -($wrapperHeight - $containerHeight + delta)) {
+        if (this.top < -(delta + ($wrapperHeight - $containerHeight))) {
           this.top = this.top;
         } else {
           this.top = Math.max(this.top + eventDelta, $containerHeight - $wrapperHeight - delta);
