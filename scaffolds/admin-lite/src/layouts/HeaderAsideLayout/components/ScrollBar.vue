@@ -2,12 +2,12 @@
   <div
     ref="scrollContainer"
     class="scroll-container"
-    @wheel.prevent="handleScroll" >
+    @wheel.prevent="handleScroll">
     <div
       ref="scrollWrapper"
       :style="{top: top + 'px'}"
       class="scroll-wrapper">
-      <slot/>
+      <slot />
     </div>
   </div>
 </template>
@@ -35,7 +35,10 @@ export default {
         if (this.top < -(delta + ($wrapperHeight - $containerHeight))) {
           this.top = this.top;
         } else {
-          this.top = Math.max(this.top + eventDelta, $containerHeight - $wrapperHeight - delta);
+          this.top = Math.max(
+            this.top + eventDelta,
+            $containerHeight - $wrapperHeight - delta,
+          );
         }
       } else {
         this.top = 0;

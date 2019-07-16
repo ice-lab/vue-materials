@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import { asideMenuConfig } from '@config/menu';
+import { asideMenuConfig } from '@/config/menu';
 import ScrollBar from './ScrollBar';
 
 export default {

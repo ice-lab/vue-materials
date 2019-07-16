@@ -1,9 +1,9 @@
 <template>
-  <div class="app-wrapper" >
-    <side-bar class="sidebar-container"/>
+  <div class="app-wrapper">
+    <side-bar class="sidebar-container" />
     <div class="main-container">
-      <nav-bar/>
-      <app-main/>
+      <nav-bar />
+      <app-main />
     </div>
   </div>
 </template>
