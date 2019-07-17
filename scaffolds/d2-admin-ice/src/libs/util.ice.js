@@ -82,7 +82,7 @@ util.recursiveMenuConfig = function recursiveMenuConfig (arr) {
     return {
       title: name,
       icon,
-      path,
+      path: path ? path + (/\/$/.test(path) ? '' : '/') : path,
       ...children ? { children: children.map(convert) } : {}
     }
   }
