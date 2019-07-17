@@ -1,9 +1,9 @@
 <template>
-  <div class="app-wrapper" >
-    <side-bar class="sidebar-container"></side-bar>
+  <div class="app-wrapper">
+    <side-bar class="sidebar-container" />
     <div class="main-container">
-      <nav-bar></nav-bar>
-      <app-main></app-main>
+      <nav-bar />
+      <app-main />
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@
 import { NavBar, SideBar, AppMain } from './components';
 
 export default {
-  name: 'layout',
+  name: 'Layout',
   components: {
     NavBar,
     SideBar,
