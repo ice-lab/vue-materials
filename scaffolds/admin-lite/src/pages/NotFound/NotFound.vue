@@ -2,33 +2,32 @@
   <div style="background:#f0f2f5;margin-top: -20px;height:100%;">
     <div class="wscn-http404">
       <div class="pic-404">
-        <img class="pic-404__parent" :src="img_404" alt="404">
-        <img class="pic-404__child left" :src="img_404_cloud" alt="404">
-        <img class="pic-404__child mid" :src="img_404_cloud" alt="404">
-        <img class="pic-404__child right" :src="img_404_cloud" alt="404">
+        <img
+          src="../../assets/404.png"
+          class="pic-404__parent"
+          alt="404">
+        <img
+          src="../../assets/404_cloud.png"
+          class="pic-404__child left"
+          alt="404">
+        <img
+          src="../../assets/404_cloud.png"
+          class="pic-404__child mid"
+          alt="404">
+        <img
+          src="../../assets/404_cloud.png"
+          class="pic-404__child right"
+          alt="404">
       </div>
       <div class="exception">
         <div class="exception__headline">抱歉，你访问的页面不存在</div>
-        <a href="/" class="exception__return-home">返回首页</a>
+        <a
+          href="/"
+          class="exception__return-home">返回首页</a>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-import img_404 from '@/assets/404.png';
-import img_404_cloud from '@/assets/404_cloud.png';
-
-export default {
-  name: 'page404',
-  data() {
-    return {
-      img_404,
-      img_404_cloud,
-    };
-  },
-};
-</script>
 
 <style lang="scss" scoped>
 .wscn-http404 {
