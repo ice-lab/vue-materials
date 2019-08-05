@@ -1,41 +1,32 @@
-# vue-materials
+# React Materials
 
-飞冰官方推荐 Vue 物料（模板/区块/组件），基于 Vue 2.x, Element, Vue CLI。
+ICE official Vue materials, based on [Vue CLI](https://cli.vuejs.org) build tool and [Element](https://element.eleme.io/#/zh-CN) components.
 
-## 使用
+## Install
 
-对应的物料数据：`https://ice.alicdn.com/assets/vue-materials.json`，可以通过 Iceworks 的自定义物料功能使用。
-
-## 如何贡献
-
-- Fork 仓库，修改代码
-- 提交 PR
-
-## 开发指南
-
-### 新增物料
+Install iceworks CLI tool:
 
 ```bash
-$ cd vue-materials
-$ idev add
+$ npm i -g iceworks
 ```
 
-### 开发调试
+## Usage
+
+Start iceworks:
 
 ```bash
-$ cd blocks/Example
-$ npm install
-$ npm run start
-$ npm run build
+$ iceworks  # will open http://127.0.0.1:8000 in browser
 ```
 
-### 相关链接
+To add this material source, go to the Materials tab > click Add:
 
-- [issue 反馈](https://github.com/alibaba/ice/issues/new)
-- [开发自定义物料指引](https://alibaba.github.io/ice/docs/materials/devtools)
-- [Element](https://element.eleme.io/#/zh-CN)
-- [Vue CLI](https://cli.vuejs.org)
-- [d2-admin](https://github.com/d2-projects/d2-admin)
+![](https://img.alicdn.com/tfs/TB1o5j2bYr1gK0jSZR0XXbP8XXa-2872-1634.jpg)
+
+Fill up the form. React materials source url `http://ice.alicdn.com/assets/materials/vue-materials.json`
+
+![](https://img.alicdn.com/tfs/TB1btzWbWL7gK0jSZFBXXXZZpXa-1460-654.jpg)
+
+Finally you can use iceworks for developing Rreact project. Enjoy it!
 
 ## License
 
