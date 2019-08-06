@@ -1,4 +1,4 @@
-# React Materials
+# Vue Materials
 
 ICE official Vue materials, based on [Vue CLI](https://cli.vuejs.org) build tool and [Element](https://element.eleme.io/#/zh-CN) components.
 
@@ -26,7 +26,7 @@ Fill up the form. React materials source url `http://ice.alicdn.com/assets/mater
 
 ![](https://img.alicdn.com/tfs/TB1btzWbWL7gK0jSZFBXXXZZpXa-1460-654.jpg)
 
-Finally you can use iceworks for developing Rreact project. Enjoy it!
+Finally you can use iceworks for developing Vue project. Enjoy it!
 
 ## License
 
