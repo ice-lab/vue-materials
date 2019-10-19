@@ -2,7 +2,6 @@
 const oss = require('ali-oss');
 const path = require('path');
 const fs = require('fs');
-const scaffolds = require('./scaffolds');
 const pkgData = require('../package.json');
 
 const bucket = 'iceworks';
@@ -36,16 +35,9 @@ function sortScaffoldMaterials() {
   return new Promise((resolve, reject) => {
     const materialsData = JSON.parse(fs.readFileSync(materialPath, 'utf-8'));
 
-    const sortMaterialsData = [];
-    scaffolds.forEach((scaffold) => {
-      materialsData.scaffolds.forEach((currentItem) => {
-        if (currentItem.name === scaffold) {
-          sortMaterialsData.push(currentItem);
-        }
-      });
+    materialsData.scaffolds = materialsData.scaffolds.filter((item) => {
+      return item.source.npm !== '@d2-admin/ice-scaffold';
     });
-
-    materialsData.scaffolds = sortMaterialsData;
 
     return fs.writeFile(
       materialPath,

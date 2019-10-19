@@ -12,6 +12,7 @@ coverage/
 
 blocks/**/lib/
 components/**/lib/
+screenshot.png
 
 .eslintcache
 build

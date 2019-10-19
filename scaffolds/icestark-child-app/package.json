@@ -1,0 +1,77 @@
+{
+  "name": "@vue-materials/icestark-child-app",
+  "version": "2.0.0",
+  "description": "icestark 基于 Vue 的子应用模板",
+  "files": [
+    "src/",
+    "dist/",
+    "public/",
+    "_gitignore",
+    ".babelrc",
+    ".postcssrc",
+    "vue.config.js",
+    "screenshot.png"
+  ],
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@ice/stark-app": "^1.0.1",
+    "element-ui": "^2.12.0",
+    "vue": "^2.5.13",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@vue/cli-plugin-babel": "^3.0.0",
+    "@vue/cli-plugin-eslint": "^3.0.0",
+    "@vue/cli-service": "^3.0.0",
+    "@vue/eslint-config-airbnb": "^3.0.0",
+    "eslint-plugin-vue": "^4.5.0",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ice-lab/vue-materials/tree/master/scaffolds/icestark-child-app"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "ice-scaffold"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://registry.npmjs.com"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "scaffoldConfig": {
+    "name": "icestark-child-app",
+    "title": "icestark Vue 子应用",
+    "screenshot": "https://img.alicdn.com/tfs/TB1X5.paYr1gK0jSZFDXXb9yVXa-2480-1200.png",
+    "categories": [
+      "icestark"
+    ]
+  },
+  "iceworks": {
+    "type": "vue",
+    "adapter": "adapter-vue-v2"
+  }
+}

@@ -3,10 +3,10 @@
   "kitVersion": "3.x",
   "scripts": {
     "upload-oss": "node scripts/upload-oss.js",
-    "generate": "idev generate",
-    "generate:ci": "LOG_LEVEL=verbose REGISTRY=https://registry.npmjs.org idev generate",
+    "generate": "iceworks generate",
+    "generate:ci": "LOG_LEVEL=verbose REGISTRY=https://registry.npmjs.org iceworks generate",
     "lint": "eslint --cache --ext .js .vue ./",
-    "deploy": "idev -V && npm run generate:ci && npm run upload-oss"
+    "deploy": "iceworks -V && npm run generate:ci && npm run upload-oss"
   },
   "dependencies": {
     "@vue/cli-service": "^3.5.3",
@@ -16,9 +16,9 @@
     "babel-eslint": "^8.1.2",
     "eslint": "^4.14.0",
     "eslint-plugin-vue": "^5.2.2",
-    "ice-devtools": "^2.2.2",
     "request": "^2.88.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "iceworks": "^3.1.2"
   },
   "materialConfig": {
     "type": "vue"

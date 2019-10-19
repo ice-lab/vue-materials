@@ -16,7 +16,8 @@
   "scripts": {
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "element-ui": "^2.3.6",
@@ -65,7 +66,10 @@
   "scaffoldConfig": {
     "name": "admin-lite",
     "title": "Admin Lite",
-    "screenshot": "https://img.alicdn.com/tfs/TB1SqrjontYBeNjy1XdXXXXyVXa-2842-1596.png"
+    "screenshot": "https://img.alicdn.com/tfs/TB1SqrjontYBeNjy1XdXXXXyVXa-2842-1596.png",
+    "categories": [
+      "基础模板"
+    ]
   },
   "iceworks": {
     "type": "vue",
