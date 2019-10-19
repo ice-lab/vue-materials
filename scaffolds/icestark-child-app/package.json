@@ -16,8 +16,7 @@
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "screenshot": "screenshot -l -u /dist/index.html",
-    "prepublishOnly": "npm run build && npm run screenshot"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@ice/stark-app": "^1.0.1",
@@ -26,7 +25,6 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "@ice/screenshot": "^0.1.1",
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-decorators": "^7.0.0",
