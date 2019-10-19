@@ -37,14 +37,11 @@ function sortScaffoldMaterials() {
     const materialsData = JSON.parse(fs.readFileSync(materialPath, 'utf-8'));
 
     const sortMaterialsData = [];
-    scaffolds.forEach((scaffold) => {
-      materialsData.scaffolds.forEach((currentItem) => {
-        if (currentItem.name === scaffold) {
-          sortMaterialsData.push(currentItem);
-        }
-      });
+    materialsData.scaffolds.forEach((currentItem) => {
+      if (currentItem.name !== 'd2-admin-ice') {
+        sortMaterialsData.push(currentItem);
+      }
     });
-
     materialsData.scaffolds = sortMaterialsData;
 
     return fs.writeFile(
