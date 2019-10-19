@@ -16,7 +16,7 @@
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "screenshot": "screenshot -l",
+    "screenshot": "screenshot -l -u /dist/index.html",
     "prepublishOnly": "npm run build && npm run screenshot"
   },
   "dependencies": {
@@ -67,6 +67,7 @@
   "scaffoldConfig": {
     "name": "icestark-child-app",
     "title": "icestark Vue 子应用",
+    "screenshot": "https://img.alicdn.com/tfs/TB1X5.paYr1gK0jSZFDXXb9yVXa-2480-1200.png",
     "categories": [
       "icestark"
     ]
