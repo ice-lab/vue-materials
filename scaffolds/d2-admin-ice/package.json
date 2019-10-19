@@ -6,9 +6,12 @@
   "homepage": "https://ice.d2admin.fairyever.com",
   "scaffoldConfig": {
     "type": "vue",
-    "name": "D2Admin ICE 1.4.5",
-    "title": "D2Admin ICE 1.4.5",
-    "screenshot": "https://qiniucdn.fairyever.com/20181031190420.png"
+    "name": "d2-admin",
+    "title": "d2-admin",
+    "screenshot": "https://qiniucdn.fairyever.com/20181031190420.png",
+    "categories": [
+      "基础模板"
+    ]
   },
   "repository": {
     "type": "git",
