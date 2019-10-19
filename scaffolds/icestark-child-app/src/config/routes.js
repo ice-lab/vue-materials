@@ -14,12 +14,10 @@ const routerConfig = [
       { path: '/detail', component: Detail },
       {
         path: '*',
-        component: () => {
-          return renderNotFound();
-        },
+        component: () => renderNotFound(),
       },
     ],
-  }
+  },
 ];
 
 export default routerConfig;
