@@ -12,8 +12,8 @@ import d2Admin from '@/plugin/d2admin'
 
 // 菜单和路由设置
 import router from './router'
-import { menuHeader, menuAside } from './menuConfig'
-import { frameInRoutes } from './routerConfig'
+import { menuHeader, menuAside } from '@/config/menu'
+import { frameInRoutes } from '@/config/routes'
 
 console.log('frameInRoutes', frameInRoutes)
 
