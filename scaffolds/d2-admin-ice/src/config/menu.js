@@ -20,11 +20,11 @@ const asideMenuConfig = [
     children: [
       {
         name: '演示 1',
-        path: '/demo1/'
+        path: '/demo1'
       },
       {
         name: '演示 2',
-        path: '/demo2/'
+        path: '/demo2'
       }
     ]
   }
@@ -62,11 +62,11 @@ const headerMenuConfig = [
     children: [
       {
         name: '演示 1',
-        path: '/demo1/'
+        path: '/demo1'
       },
       {
         name: '演示 2',
-        path: '/demo2/'
+        path: '/demo2'
       }
     ]
   }
