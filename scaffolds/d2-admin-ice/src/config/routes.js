@@ -1,14 +1,14 @@
 /* eslint-disable */
 
 // 工具
-import util from '@/libs/util.ice'
+import util from '@/libs/util.ice';
 // 页面和布局
-import Index from '@/pages/Index'
+import Index from '@/pages/Index';
 import Login from '@/pages/Login'
-import Error404 from '@/pages/Error404'
-import Demo1 from '@/pages/Demo1'
-import Demo2 from '@/pages/Demo2'
-import HeaderAside from '@/layouts/HeaderAside'
+import Error404 from '@/pages/Error404';
+import Demo1 from '@/pages/Demo1';
+import Demo2 from '@/pages/Demo2';
+import HeaderAside from '@/layouts/HeaderAside';
 
 // 变量名 routerConfig 为 iceworks 检测关键字
 // ice 会自动在这个变量下添加路由数据
@@ -20,46 +20,17 @@ import HeaderAside from '@/layouts/HeaderAside'
 // 如果不指定 meta.name 的话，name 字段会使用和上面路由 name 一样的取值逻辑
 // 下面两个页面就是对比 你可以分别观察两个页面上显示的路由数据差异
 const routerConfig = [
+  { path: '/refresh' },
+  { path: '/redirect/:route*' },
   {
     path: '/',
     component: HeaderAside,
     children: [
-      {
-        path: 'demo1',
-        component: Demo1,
-      },
-      {
-        path: 'demo2',
-        component: Demo2,
-      },
-      { path: '', component: Index, name: 'index' },
+      { path: 'demo1', component: Demo1 },
+      { path: 'demo2', component: Demo2 },
+      { path: '/demo3', component: Demo1 },
+      { path: '', component: Index },
     ],
-  },
-  // 刷新页面 必须保留
-  {
-    path: '/refresh',
-    name: 'refresh',
-    layout: HeaderAside,
-    hidden: true,
-    component: {
-      beforeRouteEnter(to, from, next) {
-        next(vm => vm.$router.replace(from.fullPath))
-      },
-      render: h => h()
-    }
-  },
-  // 页面重定向 必须保留
-  {
-    path: '/redirect/:route*',
-    name: 'redirect',
-    layout: HeaderAside,
-    hidden: true,
-    component: {
-      beforeRouteEnter(to, from, next) {
-        next(vm => vm.$router.replace(JSON.parse(from.params.route)))
-      },
-      render: h => h()
-    }
   },
   { path: '*', component: Error404 },
 ];
@@ -76,23 +47,24 @@ const routerConfigMenuOut = [
     name: 'login',
     component: Login,
     meta: {
-      auth: false
-    }
+      auth: false,
+    },
   },
+
   // 404
   {
     path: '*',
-    component: Error404
-  }
-]
+    component: Error404,
+  },
+];
 
 // 导出全部路由设置
 // 这个数据会在 router.js 中被扁平处理
 
 export default util.recursiveRouterConfig([
   ...routerConfig,
-  ...routerConfigMenuOut
-])
+  ...routerConfigMenuOut,
+]);
 
 function getFrameInRoutes() {
   const frameInRoutes = [];
@@ -101,12 +73,12 @@ function getFrameInRoutes() {
     if (children) {
       children.forEach(child => {
         const { path, name, hidden, meta } = child;
-        frameInRoutes.push({ path, name, hidden, meta })
-      })
+        frameInRoutes.push({ path, name, hidden, meta });
+      });
     } else {
-      frameInRoutes.push({ path, name, hidden, meta })
+      frameInRoutes.push({ path, name, hidden, meta });
     }
-  })
+  });
 
   return frameInRoutes;
 }
