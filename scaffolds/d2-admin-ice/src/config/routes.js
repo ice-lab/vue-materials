@@ -10,15 +10,15 @@ import Demo1 from '@/pages/Demo1';
 import Demo2 from '@/pages/Demo2';
 import HeaderAside from '@/layouts/HeaderAside';
 
-// 变量名 routerConfig 为 iceworks 检测关键字
-// ice 会自动在这个变量下添加路由数据
-// 请不要修改名称
-
 // 如果不指定 name 字段，会根据 path 生成 name = page-demo1
 // 转换规则见 util.recursiveRouterConfig 中 path2name 方法
 // meta 字段会和默认值使用 Object.assign 合并
 // 如果不指定 meta.name 的话，name 字段会使用和上面路由 name 一样的取值逻辑
 // 下面两个页面就是对比 你可以分别观察两个页面上显示的路由数据差异
+
+// 变量名 routerConfig 为 iceworks 检测关键字
+// ice 会自动在这个变量下添加路由数据
+// 请不要修改名称
 const routerConfig = [
   {
     path: '/',
