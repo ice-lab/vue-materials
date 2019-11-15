@@ -20,16 +20,14 @@ import HeaderAside from '@/layouts/HeaderAside';
 // 如果不指定 meta.name 的话，name 字段会使用和上面路由 name 一样的取值逻辑
 // 下面两个页面就是对比 你可以分别观察两个页面上显示的路由数据差异
 const routerConfig = [
-  { path: '/refresh' },
-  { path: '/redirect/:route*' },
   {
     path: '/',
     component: HeaderAside,
     children: [
       { path: 'demo1', component: Demo1 },
       { path: 'demo2', component: Demo2 },
-      { path: '/demo3', component: Demo1 },
-      { path: '', component: Index },
+      // keep the name param
+      { path: '', component: Index, name: 'index' },
     ],
   },
   { path: '*', component: Error404 },
@@ -59,8 +57,6 @@ const routerConfigMenuOut = [
 ];
 
 // 导出全部路由设置
-// 这个数据会在 router.js 中被扁平处理
-
 export default util.recursiveRouterConfig([
   ...routerConfig,
   ...routerConfigMenuOut,
