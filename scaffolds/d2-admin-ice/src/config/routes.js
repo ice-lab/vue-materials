@@ -38,7 +38,7 @@ const routerConfig = [
 // 但是这部分路由也会被注册
 // 处理规则同 routerConfig
 
-const routerConfigMenuOut = [
+const routerConfigMenuLogin = [
   // 登录
   {
     path: '/login',
@@ -59,7 +59,7 @@ const routerConfigMenuOut = [
 // 导出全部路由设置
 export default util.recursiveRouterConfig([
   ...routerConfig,
-  ...routerConfigMenuOut,
+  ...routerConfigMenuLogin,
 ]);
 
 function getFrameInRoutes() {
