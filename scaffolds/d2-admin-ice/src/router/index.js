@@ -10,7 +10,7 @@ import store from '@/store/index'
 import util from '@/libs/util.js'
 
 // 路由数据
-import routes from '../routerConfig'
+import routes from '@/config/routes'
 
 Vue.use(VueRouter)
 

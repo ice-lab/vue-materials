@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import util from './libs/util.ice'
+import util from '@/libs/util.ice';
 
 // 菜单配置
 
@@ -18,17 +18,11 @@ const asideMenuConfig = [
     name: '演示页面',
     icon: 'folder-o',
     children: [
-      {
-        name: '演示 1',
-        path: '/demo1/'
-      },
-      {
-        name: '演示 2',
-        path: '/demo2/'
-      }
-    ]
-  }
-]
+      { name: '演示 1', path: '/demo1' },
+      { name: '演示 2', path: '/demo2' },
+    ],
+  },
+];
 
 // 顶栏菜单配置
 // ice 不会修改 headerMenuConfig
@@ -44,33 +38,34 @@ const headerMenuConfig = [
         children: [
           {
             name: 'menu 1-1',
-            children: [
-              { name: 'menu 1-1-1' },
-              { name: 'menu 1-1-2' }
-            ]
+            children: [{ name: 'menu 1-1-1' }, { name: 'menu 1-1-2' }],
           },
-          { name: 'menu 1-2' }
-        ]
+
+          { name: 'menu 1-2' },
+        ],
       },
+
       { name: 'menu 2' },
-      { name: 'menu 3' }
-    ]
+      { name: 'menu 3' },
+    ],
   },
+
   {
     name: '演示页面',
     icon: 'folder-o',
     children: [
       {
         name: '演示 1',
-        path: '/demo1/'
+        path: '/demo1',
       },
+
       {
         name: '演示 2',
-        path: '/demo2/'
-      }
-    ]
-  }
-]
+        path: '/demo2',
+      },
+    ],
+  },
+];
 
 // 请根据自身业务逻辑修改导出设置，并在合适的位置赋给对应的菜单
 
@@ -82,7 +77,7 @@ const headerMenuConfig = [
 // 你可以在任何地方使用上述方法修改顶栏和侧边栏菜单
 
 // 导出顶栏菜单
-export const menuHeader = util.recursiveMenuConfig(headerMenuConfig)
+export const menuHeader = util.recursiveMenuConfig(headerMenuConfig);
 
 // 导出侧边栏菜单
-export const menuAside = util.recursiveMenuConfig(asideMenuConfig)
+export const menuAside = util.recursiveMenuConfig(asideMenuConfig);
