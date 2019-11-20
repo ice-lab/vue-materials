@@ -35,10 +35,6 @@ function sortScaffoldMaterials() {
   return new Promise((resolve, reject) => {
     const materialsData = JSON.parse(fs.readFileSync(materialPath, 'utf-8'));
 
-    materialsData.scaffolds = materialsData.scaffolds.filter((item) => {
-      return item.source.npm !== '@d2-admin/ice-scaffold';
-    });
-
     return fs.writeFile(
       materialPath,
       JSON.stringify(materialsData, null, 2),
