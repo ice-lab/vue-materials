@@ -1,9 +1,9 @@
 {
   "name": "@d2-admin/ice-scaffold",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "D2Admin 飞冰版",
   "author": "liyang <1711467488@qq.com>",
-  "homepage": "https://ice.d2admin.fairyever.com",
+  "homepage": "https://fairyever.com/d2-admin-ice/preview/",
   "scaffoldConfig": {
     "type": "vue",
     "name": "d2-admin",

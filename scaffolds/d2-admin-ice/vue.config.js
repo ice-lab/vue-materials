@@ -10,7 +10,7 @@ process.env.VUE_APP_VERSION = '2.0.0'
 process.env.VUE_APP_BUILD_TIME = require('dayjs')().format('YYYY-M-D HH:mm:ss')
 
 // 基础路径 注意发布之前要先修改这里
-let publicPath = '/'
+let publicPath = process.env.VUE_APP_PUBLIC_PATH || '/'
 
 module.exports = {
   publicPath, // 根据你的实际情况更改这里
@@ -47,7 +47,7 @@ module.exports = {
         config => config.devtool('cheap-source-map')
       )
       // TRAVIS 构建 vue-loader 添加 filename
-      .when(process.env.VUE_APP_BUILD_MODE === 'TRAVIS',
+      .when(process.env.VUE_APP_BUILD_MODE === 'preview',
         VueFilenameInjector(config)
       )
       // 非开发环境
