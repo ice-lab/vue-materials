@@ -1,6 +1,6 @@
 {
   "name": "@vue-materials/icestark-child-app",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "icestark 基于 Vue 的子应用模板",
   "files": [
     "src/",
@@ -73,5 +73,8 @@
   "iceworks": {
     "type": "vue",
     "adapter": "adapter-vue-v2"
+  },
+  "ideMode": {
+    "name": "ice-vue"
   }
 }
