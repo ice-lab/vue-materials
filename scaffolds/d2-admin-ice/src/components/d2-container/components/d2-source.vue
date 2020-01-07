@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     show () {
-      return process.env.VUE_APP_BUILD_MODE === 'TRAVIS'
+      return process.env.VUE_APP_BUILD_MODE === 'preview'
     }
   },
   watch: {
