@@ -14,6 +14,10 @@ module.exports = {
         '@': path.resolve(__dirname, 'src/'),
       },
     },
+    output: {
+      library: 'icestark-vue-demo',
+      libraryTarget: 'umd',
+    }
   },
   chainWebpack: (config) => {
     config.optimization.delete('splitChunks');
