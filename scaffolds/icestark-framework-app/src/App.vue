@@ -5,8 +5,8 @@
         <layout />
       </el-col>
       <el-col :span="22" v-loading="loading">
-        <router-view ref="view" />
         <div id="container"></div>
+        <router-view v-if="!microAppsActive" />
       </el-col>
     </el-row>
   </div>
@@ -21,6 +21,7 @@ export default {
   data () {
     return {
       loading: false,
+      microAppsActive: false,
     }
   },
   name: 'App',
@@ -28,9 +29,7 @@ export default {
     Layout,
   },
   mounted() {
-    console.log('refs', this.$refs);
     const container = document.getElementById('container');
-    // const container = this.$refs.view.$el;
     registerMicroApps([
       {
         name: 'seller',
@@ -65,11 +64,10 @@ export default {
         container,
       }
     ]);
-    console.log('bbb')
+
     start({
       onAppEnter: (appConfig) => {
         const { activePath } = appConfig;
-        console.log('aaa', activePath);
         setBasename(activePath)
       },
       onLoadingApp: () => {
@@ -77,6 +75,9 @@ export default {
       },
       onFinishLoading: () => {
         this.loading = false;
+      },
+      onActiveApps: (activeApps) => {
+        this.microAppsActive = (activeApps || []).length;
       }
     });
   },
