@@ -4,10 +4,9 @@
       <el-col :span="2" :style="{height: '100%'}">
         <layout />
       </el-col>
-      <el-col :span="22">
-          <router-view />
-        <div id="container">
-        </div>
+      <el-col :span="22" v-loading="loading">
+        <router-view ref="view" />
+        <div id="container"></div>
       </el-col>
     </el-row>
   </div>
@@ -15,15 +14,23 @@
 
 <script>
 import { registerMicroApps, start } from '@ice/stark';
+import { setBasename } from '@ice/stark-app';
 import Layout from './layout/BasicLayout'
 
 export default {
+  data () {
+    return {
+      loading: false,
+    }
+  },
   name: 'App',
   components: {
     Layout,
   },
   mounted() {
+    console.log('refs', this.$refs);
     const container = document.getElementById('container');
+    // const container = this.$refs.view.$el;
     registerMicroApps([
       {
         name: 'seller',
@@ -33,7 +40,7 @@ export default {
         sandbox: true,
         // React app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-seller-react-16
         url: [
-          'http://localhost:3334/js/index.js',
+          '//ice.alicdn.com/icestark/child-seller-react/index.js',
           '//ice.alicdn.com/icestark/child-seller-react/index.css',
         ],
         container,
@@ -44,7 +51,7 @@ export default {
         umd: true,
         url: [
           // Vue app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-waiter-vue-2
-          'http://localhost:8082/app.js',
+          '//ice.alicdn.com/icestark/child-waiter-vue/app.js',
           '//ice.alicdn.com/icestark/child-waiter-vue/app.css',
         ],
         container,
@@ -59,7 +66,19 @@ export default {
       }
     ]);
     console.log('bbb')
-    start();
+    start({
+      onAppEnter: (appConfig) => {
+        const { activePath } = appConfig;
+        console.log('aaa', activePath);
+        setBasename(activePath)
+      },
+      onLoadingApp: () => {
+        this.loading = true;
+      },
+      onFinishLoading: () => {
+        this.loading = false;
+      }
+    });
   },
 }
 </script>

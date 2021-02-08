@@ -53,9 +53,8 @@ export default {
     }
   },
   methods: {
-    handleSelect (key, path) {
+    handleSelect (key) {
       this.$router.push(key)
-      console.log('kye',key, path);
     }
   },
 };
