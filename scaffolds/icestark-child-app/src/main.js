@@ -10,7 +10,7 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
 
-let vue;
+let vue = null;
 
 export function mount(props) {
   const { container } = props;
@@ -32,6 +32,8 @@ export function mount(props) {
 
 export function unmount() {
   vue && vue.$destroy();
+  vue.$el.innerHTML = '';
+  vue = null;
 }
 
 if (!isInIcestark()) {
