@@ -22,11 +22,11 @@
         <span slot="title">Login</span>
       </el-menu-item>
 
-      <el-submenu index="/angular">
+      <!-- <el-submenu index="/angular">
         <template slot="title">Angular</template>
         <el-menu-item index="/angular/contact">Angular contact</el-menu-item>
         <el-menu-item index="/angular/detail">Angular detail</el-menu-item>
-      </el-submenu>
+      </el-submenu> -->
       <!-- 商家平台 -->
       <el-submenu index="/seller">
         <template slot="title">商家平台</template>

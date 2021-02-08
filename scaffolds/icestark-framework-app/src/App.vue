@@ -54,15 +54,15 @@ export default {
           '//ice.alicdn.com/icestark/child-waiter-vue/app.css',
         ],
         container,
-      }, {
-        name: 'angular',
-        activePath: '/angular',
-        title: 'Angular',
-        sandbox: true,
-        // Angular app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-common-angular-9
-        entry: '//ice.alicdn.com/icestark/child-common-angular/index.html',
-        container,
       }
+      //   name: 'angular',
+      //   activePath: '/angular',
+      //   title: 'Angular',
+      //   sandbox: true,
+      //   // Angular app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-common-angular-9
+      //   entry: '//ice.alicdn.com/icestark/child-common-angular/index.html',
+      //   container,
+      // }
     ]);
 
     start({
