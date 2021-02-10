@@ -69,12 +69,5 @@
     "categories": [
       "icestark"
     ]
-  },
-  "iceworks": {
-    "type": "vue",
-    "adapter": "adapter-vue-v2"
-  },
-  "ideMode": {
-    "name": "ice-vue"
   }
 }
