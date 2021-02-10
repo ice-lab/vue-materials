@@ -1,6 +1,6 @@
 {
   "name": "@vue-materials/icestark-child-app",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "icestark 基于 Vue 的子应用模板",
   "files": [
     "src/",
@@ -55,8 +55,7 @@
     "ice-scaffold"
   ],
   "publishConfig": {
-    "access": "public",
-    "registry": "http://registry.npmjs.com"
+    "access": "public"
   },
   "browserslist": [
     "> 1%",

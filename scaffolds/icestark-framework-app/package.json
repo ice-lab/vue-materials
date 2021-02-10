@@ -52,5 +52,8 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
