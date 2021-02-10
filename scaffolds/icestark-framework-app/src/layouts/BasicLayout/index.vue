@@ -9,7 +9,7 @@
       active-text-color="#1989fa"
       :style="{ height: '100%', boxShadow: '0px 1px 3px 0px rgb(0 0 0 / 12%)' }"
     >
-      <el-menu-item index="/home">
+      <el-menu-item index="/">
         <i class="el-icon-menu"></i>
         <span slot="title">Home</span>
       </el-menu-item>

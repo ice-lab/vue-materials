@@ -1,6 +1,6 @@
 {
   "name": "@vue-materials/icestark-layout-app",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "icestark 基于 Vue 的主应用模板",
   "homepage": "https://icestark-vue.surge.sh",
   "scripts": {
