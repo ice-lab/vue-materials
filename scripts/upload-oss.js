@@ -7,7 +7,7 @@ const pkgData = require('../package.json');
 const bucket = 'iceworks';
 const accessKeyId = process.env.ACCESS_KEY_ID;
 const accessKeySecret = process.env.ACCESS_KEY_SECRET;
-const branch = process.env.TRAVIS_BRANCH;
+const branch = process.env.BRANCH_NAME;
 const dirPath = pkgData.kitVersion === '3.x' ? 'materials/' : '/';
 let assetsPath;
 

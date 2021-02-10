@@ -1,6 +1,6 @@
 {
   "name": "@vue-materials/icestark-child-app",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "icestark 基于 Vue 的子应用模板",
   "files": [
     "src/",
@@ -41,6 +41,7 @@
     "@vue/eslint-config-airbnb": "^3.0.0",
     "eslint-plugin-vue": "^4.5.0",
     "node-sass": "^4.7.2",
+    "react": "^17.0.1",
     "sass-loader": "^6.0.6",
     "vue-template-compiler": "^2.5.13"
   },
@@ -54,8 +55,7 @@
     "ice-scaffold"
   ],
   "publishConfig": {
-    "access": "public",
-    "registry": "http://registry.npmjs.com"
+    "access": "public"
   },
   "browserslist": [
     "> 1%",
@@ -69,12 +69,5 @@
     "categories": [
       "icestark"
     ]
-  },
-  "iceworks": {
-    "type": "vue",
-    "adapter": "adapter-vue-v2"
-  },
-  "ideMode": {
-    "name": "ice-vue"
   }
 }
