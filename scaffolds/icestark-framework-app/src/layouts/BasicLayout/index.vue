@@ -22,21 +22,15 @@
         <span slot="title">Login</span>
       </el-menu-item>
 
-      <!-- <el-submenu index="/angular">
-        <template slot="title">Angular</template>
-        <el-menu-item index="/angular/contact">Angular contact</el-menu-item>
-        <el-menu-item index="/angular/detail">Angular detail</el-menu-item>
-      </el-submenu> -->
-      <!-- 商家平台 -->
       <el-submenu index="/seller">
-        <template slot="title">商家平台</template>
+        <template slot="title">商家平台（React）</template>
         <el-menu-item index="/seller">商家首页</el-menu-item>
         <el-menu-item index="/seller/list">商家列表</el-menu-item>
         <el-menu-item index="/seller/detail">商家详情</el-menu-item>
       </el-submenu>
 
       <el-submenu index="/waiter">
-        <template slot="title">小二平台</template>
+        <template slot="title">小二平台（Vue）</template>
         <el-menu-item index="/waiter">小二首页</el-menu-item>
         <el-menu-item index="/waiter/list">小二列表</el-menu-item>
         <el-menu-item index="/waiter/detail">小二详情</el-menu-item>
@@ -45,7 +39,6 @@
   </div>
 </template>
 <script>
-
 export default {
   computed: {
     value () {

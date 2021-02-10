@@ -15,7 +15,7 @@
 <script>
 import { registerMicroApps, start } from '@ice/stark';
 import { setBasename } from '@ice/stark-app';
-import Layout from './layout/BasicLayout'
+import Layout from './layouts/BasicLayout'
 
 export default {
   data () {
@@ -37,10 +37,10 @@ export default {
         title: '商家平台',
         umd: true,
         sandbox: true,
-        // React app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-seller-react-16
+        // React app demo: https://github.com/alibaba-fusion/materials/tree/master/scaffolds/ice-stark-child
         url: [
-          '//ice.alicdn.com/icestark/child-seller-react/index.js',
-          '//ice.alicdn.com/icestark/child-seller-react/index.css',
+          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/index.js',
+          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/index.css',
         ],
         container,
       }, {
@@ -48,21 +48,21 @@ export default {
         activePath: '/waiter',
         title: '小二平台',
         umd: true,
+        // Vue app demo: https://github.com/ice-lab/vue-materials/tree/master/scaffolds/icestark-child-app
         url: [
-          // Vue app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-waiter-vue-2
-          '//ice.alicdn.com/icestark/child-waiter-vue/app.js',
-          '//ice.alicdn.com/icestark/child-waiter-vue/app.css',
+          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/app.js',
+          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/app.css',
         ],
         container,
+      }, {
+        // TODO: Angular
+        name: 'angular',
+        activePath: '/angular',
+        title: 'Angular',
+        sandbox: true,
+        // Angular app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-common-angular
+        entry: 'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-common-angular/index.html',
       }
-      //   name: 'angular',
-      //   activePath: '/angular',
-      //   title: 'Angular',
-      //   sandbox: true,
-      //   // Angular app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-common-angular-9
-      //   entry: '//ice.alicdn.com/icestark/child-common-angular/index.html',
-      //   container,
-      // }
     ]);
 
     start({

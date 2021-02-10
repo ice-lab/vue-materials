@@ -1,9 +1,9 @@
 {
-  "name": "icestark-vue-layout",
+  "name": "@vue-materials/icestark-layout-app",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "start": "npm run serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -21,7 +21,6 @@
     "@ice/stark-app": "^1.2.2-0",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.0",
-    "react": "^17.0.1",
     "vue": "^2.6.11",
     "vue-router": "^3.5.1"
   },
@@ -32,7 +31,8 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "react": "^17.0.1"
   },
   "eslintConfig": {
     "root": true,
