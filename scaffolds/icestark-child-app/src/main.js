@@ -31,15 +31,17 @@ export function mount(props) {
 }
 
 export function unmount() {
-  vue && vue.$destroy();
+  if (vue) vue.$destroy();
   vue.$el.innerHTML = '';
   vue = null;
 }
 
 if (!isInIcestark()) {
   // 初始化 vue 项目
+  // eslint-disable-next-line no-new
   new Vue({
     router,
+    el: '#app',
     mounted: () => {
       console.log('App mounted');
     },
@@ -47,6 +49,5 @@ if (!isInIcestark()) {
       console.log('App destroyed');
     },
     render: h => h(App),
-    el: '#app'
-  })
+  });
 }
