@@ -56,5 +56,6 @@ export default {
 <style lang="css" scoped>
 .menu {
   height: 100%;
+  width: 200px;
 }
 </style>

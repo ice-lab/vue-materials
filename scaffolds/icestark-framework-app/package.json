@@ -1,6 +1,8 @@
 {
   "name": "@vue-materials/icestark-layout-app",
-  "version": "0.1.1",
+  "version": "0.1.2",
+  "description": "icestark 基于 Vue 的主应用模板",
+  "homepage": "https://icestark-vue.surge.sh",
   "scripts": {
     "serve": "vue-cli-service serve",
     "start": "npm run serve",
@@ -56,5 +58,17 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ice-lab/vue-materials/tree/master/scaffolds/icestark-framework-app"
+  },
+  "scaffoldConfig": {
+    "name": "icestark-framework-app",
+    "title": "icestark Vue 主应用",
+    "screenshot": "https://img.alicdn.com/imgextra/i4/O1CN01viScHq1xQC8KtFTIH_!!6000000006437-2-tps-1811-904.png",
+    "categories": [
+      "icestark"
+    ]
   }
 }
