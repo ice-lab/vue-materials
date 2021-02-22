@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <el-row :gutter="10" class="el-rwo">
-      <el-col :span="2" :style="{height: '100%'}">
+      <el-col :span="3" :style="{height: '100%'}">
         <layout />
       </el-col>
-      <el-col :span="22" v-loading="loading">
+      <el-col :span="21" v-loading="loading">
         <div id="container"></div>
         <router-view v-if="!microAppsActive" />
       </el-col>
@@ -75,6 +75,13 @@ export default {
       },
       onFinishLoading: () => {
         this.loading = false;
+      },
+      onRouteChange: (_, pathname) => {
+        // 处理微应用间跳转无法触发 Vue Router 响应
+        this
+          .$router
+          .push(pathname)
+          .catch(() => {})
       },
       onActiveApps: (activeApps) => {
         this.microAppsActive = (activeApps || []).length;
