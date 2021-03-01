@@ -35,23 +35,22 @@ export default {
         name: 'seller',
         activePath: '/seller',
         title: '商家平台',
-        umd: true,
         sandbox: true,
         // React app demo: https://github.com/alibaba-fusion/materials/tree/master/scaffolds/ice-stark-child
         url: [
-          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/index.js',
-          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/index.css',
+          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/build/js/index.js',
+          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/build/css/index.css',
         ],
         container,
       }, {
         name: 'waiter',
         activePath: '/waiter',
         title: '小二平台',
-        umd: true,
+        sandbox: true,
         // Vue app demo: https://github.com/ice-lab/vue-materials/tree/master/scaffolds/icestark-child-app
         url: [
-          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/app.js',
-          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/app.css',
+          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/dist/js/app.js',
+          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/dist/css/app.css',
         ],
         container,
       }, {
