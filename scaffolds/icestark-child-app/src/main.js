@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { isInIcestark } from '@ice/stark-app';
+import { isInIcestark, setLibraryName } from '@ice/stark-app';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './styles/global.scss';
@@ -11,6 +11,9 @@ Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
 let vue = null;
+
+// set in vue.config.js
+setLibraryName('icestark-vue-demo');
 
 export function mount(props) {
   const { container } = props;
