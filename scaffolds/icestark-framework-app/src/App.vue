@@ -1,14 +1,12 @@
 <template>
   <div id="app">
-    <el-row :gutter="10" class="el-rwo">
-      <el-col :span="3" :style="{height: '100%'}">
-        <layout />
-      </el-col>
-      <el-col :span="21" v-loading="loading">
-        <div id="container"></div>
-        <router-view v-if="!microAppsActive" />
-      </el-col>
-    </el-row>
+    <div>
+      <layout />
+    </div>
+    <div class="content" v-loading="loading">
+      <div id="container"></div>
+      <router-view v-if="!microAppsActive" />
+    </div>
   </div>
 </template>
 
@@ -35,7 +33,8 @@ export default {
         name: 'seller',
         activePath: '/seller',
         title: '商家平台',
-        sandbox: true,
+        // sandbox: true,
+        // umd: true,
         // React app demo: https://github.com/alibaba-fusion/materials/tree/master/scaffolds/ice-stark-child
         url: [
           'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/build/js/index.js',
@@ -97,11 +96,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   height: 100vh;
+
+  display: flex;
 }
 body {
   margin: 0;
   padding: 0;
 }
+.content {
+  flex: 1;
+  margin: 40px;
+}
+
 .el-rwo {
   height: 100%;
 }
