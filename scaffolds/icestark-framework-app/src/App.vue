@@ -1,14 +1,12 @@
 <template>
   <div id="app">
-    <el-row :gutter="10" class="el-rwo">
-      <el-col :span="2" :style="{height: '100%'}">
-        <layout />
-      </el-col>
-      <el-col :span="22" v-loading="loading">
-        <div id="container"></div>
-        <router-view v-if="!microAppsActive" />
-      </el-col>
-    </el-row>
+    <div>
+      <layout />
+    </div>
+    <div class="content" v-loading="loading">
+      <div id="container"></div>
+      <router-view v-if="!microAppsActive" />
+    </div>
   </div>
 </template>
 
@@ -35,23 +33,22 @@ export default {
         name: 'seller',
         activePath: '/seller',
         title: '商家平台',
-        umd: true,
         sandbox: true,
         // React app demo: https://github.com/alibaba-fusion/materials/tree/master/scaffolds/ice-stark-child
         url: [
-          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/index.js',
-          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/index.css',
+          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/build/js/index.js',
+          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/build/css/index.css',
         ],
         container,
       }, {
         name: 'waiter',
         activePath: '/waiter',
         title: '小二平台',
-        umd: true,
+        sandbox: true,
         // Vue app demo: https://github.com/ice-lab/vue-materials/tree/master/scaffolds/icestark-child-app
         url: [
-          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/app.js',
-          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/app.css',
+          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/dist/js/app.js',
+          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/dist/css/app.css',
         ],
         container,
       }, {
@@ -76,6 +73,13 @@ export default {
       onFinishLoading: () => {
         this.loading = false;
       },
+      onRouteChange: (_, pathname) => {
+        // 处理微应用间跳转无法触发 Vue Router 响应
+        this
+          .$router
+          .push(pathname)
+          .catch(() => {})
+      },
       onActiveApps: (activeApps) => {
         this.microAppsActive = (activeApps || []).length;
       }
@@ -91,11 +95,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   height: 100vh;
+
+  display: flex;
 }
 body {
   margin: 0;
   padding: 0;
 }
+.content {
+  flex: 1;
+  margin: 40px;
+}
+
 .el-rwo {
   height: 100%;
 }
