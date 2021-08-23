@@ -12,7 +12,6 @@
 
 <script>
 import { registerMicroApps, start } from '@ice/stark';
-import { setBasename } from '@ice/stark-app';
 import Layout from './layouts/BasicLayout'
 
 export default {
