@@ -55,7 +55,6 @@ export default {
         // TODO: Angular
         name: 'angular',
         activePath: '/angular',
-        basename: "/seller",
         title: 'Angular',
         sandbox: true,
         // Angular app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-common-angular
