@@ -33,7 +33,6 @@ export default {
         name: 'seller',
         activePath: '/seller',
         title: '商家平台',
-        basename: "/seller",
         sandbox: true,
         // React app demo: https://github.com/alibaba-fusion/materials/tree/master/scaffolds/ice-stark-child
         url: [
