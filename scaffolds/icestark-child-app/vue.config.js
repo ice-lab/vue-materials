@@ -18,6 +18,13 @@ module.exports = {
       library: 'icestark-vue-demo',
       libraryTarget: 'umd',
     },
+    devServer: {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'content-type',
+        'Access-Control-Allow-Methods': 'DELETE,PUT,POST,GET,OPTIONS',
+      },
+    },
   },
   chainWebpack: (config) => {
     config.optimization.delete('splitChunks');
