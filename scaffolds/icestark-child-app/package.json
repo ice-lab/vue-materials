@@ -1,6 +1,6 @@
 {
   "name": "@vue-materials/icestark-child-app",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "icestark 基于 Vue 的子应用模板",
   "homepage": "https://icestark-vue.surge.sh/waiter",
   "files": [

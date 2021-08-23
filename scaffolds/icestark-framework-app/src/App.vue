@@ -12,7 +12,6 @@
 
 <script>
 import { registerMicroApps, start } from '@ice/stark';
-import { setBasename } from '@ice/stark-app';
 import Layout from './layouts/BasicLayout'
 
 export default {
@@ -36,8 +35,8 @@ export default {
         sandbox: true,
         // React app demo: https://github.com/alibaba-fusion/materials/tree/master/scaffolds/ice-stark-child
         url: [
-          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/build/js/index.js',
-          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/build/css/index.css',
+          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/build/js/index.js',
+          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-react/build/css/index.css',
         ],
         container,
       }, {
@@ -47,8 +46,8 @@ export default {
         sandbox: true,
         // Vue app demo: https://github.com/ice-lab/vue-materials/tree/master/scaffolds/icestark-child-app
         url: [
-          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/dist/js/app.js',
-          'https:////iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/dist/css/app.css',
+          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/dist/js/app.js',
+          'https://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-waiter-vue/dist/css/app.css',
         ],
         container,
       }, {
@@ -63,10 +62,6 @@ export default {
     ]);
 
     start({
-      onAppEnter: (appConfig) => {
-        const { activePath } = appConfig;
-        setBasename(activePath)
-      },
       onLoadingApp: () => {
         this.loading = true;
       },
