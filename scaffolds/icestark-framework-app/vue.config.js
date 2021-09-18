@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  publicPath: './',
+  publicPath: '/',
   lintOnSave: false,
   filenameHashing: false,
   css: {
