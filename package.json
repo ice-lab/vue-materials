@@ -4,9 +4,11 @@
   "scripts": {
     "upload-oss": "node scripts/upload-oss.js",
     "generate": "iceworks generate",
+    "publish:packages": "ts-node ./scripts/publish-packages.ts",
     "generate:ci": "LOG_LEVEL=verbose REGISTRY=https://registry.npmjs.org iceworks generate",
     "lint": "eslint --cache --ext .js .vue ./",
-    "deploy": "iceworks -V && npm run generate:ci && npm run upload-oss"
+    "deploy": "iceworks -V && npm run generate:ci && npm run upload-oss",
+    "prepublishOnly": "npm run generate"
   },
   "dependencies": {
     "@vue/cli-service": "^3.5.3",
@@ -16,11 +18,17 @@
     "babel-eslint": "^8.1.2",
     "eslint": "^4.14.0",
     "eslint-plugin-vue": "^5.2.2",
+    "fs-extra": "^10.0.0",
+    "globby": "^11.0.4",
+    "iceworks": "^3.1.2",
     "request": "^2.88.0",
-    "vue-template-compiler": "^2.6.10",
-    "iceworks": "^3.1.2"
+    "ts-node": "^10.2.1",
+    "vue-template-compiler": "^2.6.10"
   },
   "materialConfig": {
     "type": "vue"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13"
   }
 }

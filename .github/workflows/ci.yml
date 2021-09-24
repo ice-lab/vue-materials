@@ -14,8 +14,12 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm i
       - run: npm run lint
-      - run: npm run deploy
+      - run: npm run publish:packages
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          GIT_COMMIT_MESSAGE: ${{github.event.commits[0].message}}
+      - run: npm run upload-oss
+        env:
           ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
           ACCESS_KEY_SECRET: ${{ secrets.ACCESS_KEY_SECRET }}
+          GIT_COMMIT_MESSAGE: ${{github.event.commits[0].message}}
