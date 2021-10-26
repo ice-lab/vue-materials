@@ -6,7 +6,7 @@ import globby from 'globby';
 import checkVersionExist from './utils/checkVersionExist';
 import generateBetaVersion from './utils/generateBetaVersion';
 
-const commitMessage = process.env.GIT_COMMIT_MESSAGE;
+const commitMessage: string = process.env.GIT_COMMIT_MESSAGE;
 const branchName = process.env.BRANCH_NAME;
 const rootDir = join(__dirname, '../');
 
