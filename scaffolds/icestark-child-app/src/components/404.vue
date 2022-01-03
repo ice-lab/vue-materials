@@ -1,3 +1,3 @@
 <template>
-  <h1>List Page</h1>
+  <h1>404 Page</h1>
 </template>

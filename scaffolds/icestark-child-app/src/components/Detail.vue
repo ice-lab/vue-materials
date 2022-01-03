@@ -1,3 +1,3 @@
 <template>
-  <h1>List Page</h1>
+  <h1>Detail Page</h1>
 </template>

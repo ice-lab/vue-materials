@@ -1,12 +1,12 @@
-import { createApp } from 'vue'
-import type { App as Root} from 'vue';
+import { createApp } from 'vue';
+import type { App as Root } from 'vue';
 import isInIcestark from '@ice/stark-app/lib/isInIcestark';
-import App from './App.vue'
+import App from './App.vue';
 import genRoute from './router';
 
 let vue: Root<Element> | null = null;
 
-if (!isInIcestark ()) {
+if (!isInIcestark()) {
   vue = createApp(App);
   vue.use(genRoute());
   vue.mount('#app');
