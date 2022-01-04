@@ -7,7 +7,7 @@ import isInIcestark from '@ice/stark-app/lib/isInIcestark';
 import getBasename from '@ice/stark-app/lib/getBasename';
 import renderNotFound from '@ice/stark-app/lib/renderNotFound';
 
-const renderNotFoundPromise = new Promise((resolve) => {
+const renderNotFoundPromise = () => new Promise((resolve) => {
   renderNotFound();
   resolve(true);
 });
@@ -35,7 +35,7 @@ const genRoute = () => {
       },
       {
         path: '/:pathMatch(.*)',
-        component: isInIcestark() ? () => renderNotFoundPromise : NotFound,
+        component: isInIcestark() ? () => renderNotFoundPromise() : NotFound,
       },
     ],
   });
