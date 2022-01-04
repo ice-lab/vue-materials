@@ -1,24 +1,11 @@
-# icestark-vue-layout
+# Vite + icestark + vue3 框架应用
 
-## Project setup
-```
-npm install
-```
+Demo for building icestark micro applications created by Vite.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Online
 
-### Compiles and minifies for production
-```
-npm run build
-```
+https://icestark-vite-vue.vercel.app/
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[Edit in stackBlitz](https://stackblitz.com/edit/github-kpsfcv)
+

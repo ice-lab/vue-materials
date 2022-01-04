@@ -8,6 +8,16 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },
+  "files": [
+    "src/",
+    "dist/",
+    "public/",
+    "_gitignore",
+    "index.html",
+    "README.md",
+    "vite.config.js",
+    "tsconfig.json"
+  ],
   "dependencies": {
     "@ice/stark-app": "^1.4.1",
     "vue": "^3.2.16",
