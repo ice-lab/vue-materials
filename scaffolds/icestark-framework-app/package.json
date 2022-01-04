@@ -1,6 +1,6 @@
 {
   "name": "@vue-materials/icestark-layout-app",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "icestark 基于 Vue 的主应用模板",
   "scripts": {
     "dev": "vite",

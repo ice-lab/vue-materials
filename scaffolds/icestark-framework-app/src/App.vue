@@ -26,8 +26,8 @@
         name: 'waiter',
         activePath: '/waiter',
         title: '小二平台',
-        loadScriptMode: "import",
-        entry: "http://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-vue3-vite/index.html",
+        loadScriptMode: 'import',
+        entry: 'http://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-vue3-vite/index.html',
         container,
       }
     ]);
