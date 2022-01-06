@@ -46,7 +46,6 @@
           .catch(() => {})
       },
       onActiveApps: (activeApps) => {
-        console.log('fdsfsdf', activeApps)
         microAppsActive.value = !!(activeApps || []).length;
       }
     });

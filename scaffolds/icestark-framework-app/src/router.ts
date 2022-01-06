@@ -4,7 +4,6 @@ import About from './pages/About.vue';
 import Login from './pages/Login.vue';
 import NotFound from './pages/NotFound.vue';
 
-// https://zhuanlan.zhihu.com/p/138444490
 const routerHistory = createWebHistory();
 
 const router = createRouter({

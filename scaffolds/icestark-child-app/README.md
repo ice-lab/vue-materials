@@ -6,6 +6,5 @@ Demo for building icestark micro applications created by Vite.
 
 https://icestark-vite-vue.vercel.app/
 
-
 [Edit in stackBlitz](https://stackblitz.com/edit/github-kpsfcv)
 
