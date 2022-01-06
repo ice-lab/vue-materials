@@ -10,17 +10,7 @@ export const history = createWebHistory(isInIcestark() ? getBasename() : '/');
 
 let vue: Root<Element> | null = null;
 
-if (!isInIcestark()) {
-  const router = createRouter({
-    history,
-    routes,
-  });
-  vue = createApp(App);
-  vue.use(router);
-  vue.mount('#app');
-}
-
-export function mount({ container }: { container: Element}) {
+const runApp = (container: Element | string) => {
   const router = createRouter({
     history,
     routes,
@@ -28,6 +18,14 @@ export function mount({ container }: { container: Element}) {
   vue = createApp(App);
   vue.use(router);
   vue.mount(container);
+};
+
+if (!isInIcestark()) {
+  runApp('#app');
+}
+
+export function mount({ container }: { container: Element}) {
+  runApp(container);
 }
 
 export function unmount() {
