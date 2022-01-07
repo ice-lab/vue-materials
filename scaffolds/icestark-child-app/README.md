@@ -1,3 +1,7 @@
-# icestark Vue 子应用
+# Vite + icestark + vue3 Demo
 
-icestark 基于 Vue 的子应用模板
+Demo for building icestark micro applications created by Vite.
+
+## Online
+
+https://icestark-vite-vue.vercel.app/

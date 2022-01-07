@@ -1,67 +1,48 @@
 {
   "name": "@vue-materials/icestark-layout-app",
-  "version": "0.1.5",
+  "version": "1.0.0",
   "description": "icestark 基于 Vue 的主应用模板",
-  "homepage": "https://icestark-vue.surge.sh",
+  "homepage": "https://icestark-framework-vue3-x.vercel.app/",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "start": "npm run serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "prepublishOnly": "npm run build"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
   },
   "files": [
     "src/",
     "dist/",
     "public/",
     "_gitignore",
-    "babel.config.js",
+    "index.html",
     "README.md",
-    "vue.config.js"
+    "vite.config.js",
+    "tsconfig.json"
   ],
   "dependencies": {
-    "@ice/stark": "^2.1.1",
-    "@ice/stark-app": "^1.2.2",
-    "core-js": "^3.6.5",
-    "element-ui": "^2.15.0",
-    "vue": "^2.6.11",
-    "vue-router": "^3.5.1"
+    "@element-plus/icons-vue": "^0.2.4",
+    "@ice/stark": "^2.6.1",
+    "element-plus": "^1.2.0-beta.6",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.11"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11",
-    "react": "^17.0.1"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "publishConfig": {
-    "access": "public"
+    "@vitejs/plugin-vue": "^1.9.2",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.0",
+    "vite-plugin-index-html": "^0.1.0",
+    "vue-tsc": "^0.3.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/ice-lab/vue-materials/tree/master/scaffolds/icestark-framework-app"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "ice-scaffold"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "scaffoldConfig": {
     "name": "icestark-framework-app",

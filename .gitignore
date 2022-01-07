@@ -19,3 +19,4 @@ build
 .vscode/
 .tmp/
 dist
+.vercel/
