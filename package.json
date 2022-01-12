@@ -1,5 +1,6 @@
 {
   "private": true,
+  "version": "1.0.1",
   "kitVersion": "3.x",
   "scripts": {
     "upload-oss": "node scripts/upload-oss.js",
