@@ -1,6 +1,6 @@
 {
   "name": "@vue-materials/icestark-layout-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "icestark 基于 Vue 的主应用模板",
   "homepage": "https://icestark-framework-vue3-x.vercel.app/",
   "scripts": {
@@ -15,7 +15,7 @@
     "_gitignore",
     "index.html",
     "README.md",
-    "vite.config.js",
+    "vite.config.ts",
     "tsconfig.json"
   ],
   "dependencies": {
