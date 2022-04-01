@@ -33,10 +33,10 @@ const toPath = path.join(assetsPath, dirPath, 'vue-materials.json');
  * 按照下载量进行排序推荐
  */
 function sortScaffoldMaterials() {
-  return util.promisefy(fs.readFile)(materialPath, 'utf-8')
+  return util.promisify(fs.readFile)(materialPath, 'utf-8')
     .then(JSON.parse)
     .then((materialsData) => {
-      return util.promisefy(fs.writeFile)(
+      return util.promisify(fs.writeFile)(
         materialPath,
         JSON.stringify(materialsData, null, 2),
         'utf-8',
