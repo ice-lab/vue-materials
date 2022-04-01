@@ -18,7 +18,10 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GIT_COMMIT_MESSAGE: ${{github.event.commits[0].message}}
-      - run: npm run deploy
+
+      - name: 'depoly'
+        if: ${{ github.ref == 'refs/heads/master' }}
+        run: npm run deploy
         env:
           ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
           ACCESS_KEY_SECRET: ${{ secrets.ACCESS_KEY_SECRET }}

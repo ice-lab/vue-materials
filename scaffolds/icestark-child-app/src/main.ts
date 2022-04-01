@@ -6,11 +6,11 @@ import getBasename from '@ice/stark-app/lib/getBasename';
 import App from './App.vue';
 import routes from './routes';
 
-export const history = createWebHistory(isInIcestark() ? getBasename() : '/');
 
 let vue: Root<Element> | null = null;
 
 const runApp = (container: Element | string) => {
+  const history = createWebHistory(isInIcestark() ? getBasename() : '/');
   const router = createRouter({
     history,
     routes,
