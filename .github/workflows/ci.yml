@@ -20,7 +20,6 @@ jobs:
           GIT_COMMIT_MESSAGE: ${{github.event.commits[0].message}}
 
       - name: 'depoly'
-        if: ${{ github.ref == 'refs/heads/master' }}
         run: npm run deploy
         env:
           ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}

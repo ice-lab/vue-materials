@@ -5,6 +5,7 @@ const fs = require('fs');
 const util = require('util');
 const pkgData = require('../package.json');
 
+const commitMessage = process.env.GIT_COMMIT_MESSAGE;
 const bucket = 'iceworks';
 const accessKeyId = process.env.ACCESS_KEY_ID;
 const accessKeySecret = process.env.ACCESS_KEY_SECRET;
@@ -14,6 +15,10 @@ let assetsPath;
 
 if (['master', 'stable/kit-2.x'].indexOf(branch) === -1) {
   assetsPath = 'pre-assets';
+
+  if (/trigger generate/.test(commitMessage)) {
+    process.exit(0);
+  }
 } else {
   assetsPath = 'assets';
 }
