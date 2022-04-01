@@ -13,6 +13,8 @@ const value = computed(() => {
 });
 
 const handleSelect = (key: string) => {
+  console.log('handleSelect-------', key)
+  debugger
   router.push(key);
 };
 

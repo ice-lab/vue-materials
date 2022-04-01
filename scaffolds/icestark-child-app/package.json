@@ -20,8 +20,8 @@
   ],
   "dependencies": {
     "@ice/stark-app": "^1.4.1",
-    "vue": "^3.2.16",
-    "vue-router": "^4.0.11"
+    "vue": "3.2.16",
+    "vue-router": "4.0.11"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.2",

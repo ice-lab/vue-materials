@@ -20,14 +20,14 @@
         title: '商家平台',
         loadScriptMode: 'import',
         // React app demo: https://github.com/ice-lab/react-materials/tree/master/scaffolds/icestark-child
-        entry: 'http://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-seller-ice-vite/index.html',
+        entry: 'http://localhost:3000/',
         container,
       }, {
         name: 'waiter',
         activePath: '/waiter',
         title: '小二平台',
         loadScriptMode: 'import',
-        entry: 'http://iceworks.oss-cn-hangzhou.aliyuncs.com/icestark/child-vue3-vite/index.html',
+        entry: 'http://localhost:3002/',
         container,
       }
     ]);
