@@ -2,6 +2,7 @@
 const oss = require('ali-oss');
 const path = require('path');
 const fs = require('fs');
+const util = require('util');
 const pkgData = require('../package.json');
 
 const bucket = 'iceworks';
@@ -32,19 +33,15 @@ const toPath = path.join(assetsPath, dirPath, 'vue-materials.json');
  * 按照下载量进行排序推荐
  */
 function sortScaffoldMaterials() {
-  return new Promise((resolve, reject) => {
-    const materialsData = JSON.parse(fs.readFileSync(materialPath, 'utf-8'));
-
-    return fs.writeFile(
-      materialPath,
-      JSON.stringify(materialsData, null, 2),
-      'utf-8',
-      (err) => {
-        if (err) reject(err);
-        resolve();
-      },
-    );
-  });
+  return util.promisify(fs.readFile)(materialPath, 'utf-8')
+    .then(JSON.parse)
+    .then((materialsData) => {
+      return util.promisify(fs.writeFile)(
+        materialPath,
+        JSON.stringify(materialsData, null, 2),
+        'utf-8',
+      );
+    });
 }
 
 console.log('start upload oss', materialPath, toPath);
